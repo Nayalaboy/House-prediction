@@ -1,3 +1,5 @@
+
+
 # California Housing Price Prediction
 
 ## Overview
@@ -26,3 +28,5 @@ Model
 **User Interface:**
 - Material-UI components for styling.
 - Responsive design for various screen sizes.
+
+![page snipet](https://github.com/Nayalaboy/House-prediction/blob/main/page_snipet.png)
