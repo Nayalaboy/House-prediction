@@ -15,7 +15,7 @@ model = load('ridge_model.joblib')
 # Define the home route
 @app.route('/')
 def home():
-    return "Hello, World!"
+    return "Hahahahhah "
 
 # Define the prediction endpoint
 @app.route('/predict', methods=['POST'])
