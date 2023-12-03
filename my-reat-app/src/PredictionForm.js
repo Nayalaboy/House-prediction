@@ -71,6 +71,7 @@ function PredictionForm(){
             <form onSubmit={handleSubmit}>
 
                 <TextField
+                    className="form-element"
                     type= "number"
                     label="Median income for households"
                     variant="outlined"                    
@@ -82,6 +83,7 @@ function PredictionForm(){
                 />
 
                 <TextField
+                    className="form-element"
                     label="Median house age "
                     variant="outlined"                    
                     name="HouseAge"
@@ -90,6 +92,7 @@ function PredictionForm(){
                     margin= "normal"
                 />
                 <TextField
+                    className="form-element"
                     label="Average number of rooms "
                     variant="outlined"                    
                     name="AveRooms"
@@ -99,6 +102,7 @@ function PredictionForm(){
                 />
 
                 <TextField
+                    className="form-element"
                     label="Average number of bedrooms "
                     variant="outlined"                    
                     name="AveBedrms"
@@ -108,6 +112,7 @@ function PredictionForm(){
                 />
                 
                 <TextField
+                    className="form-element"
                     label="block group population"
                     variant="outlined"                    
                     name="Population"
@@ -118,7 +123,8 @@ function PredictionForm(){
                 />
 
                 <TextField
-                    label="Average number of household members"
+                    className="form-element"
+                    label="household headcount"
                     variant="outlined"                    
                     name="AveOccup"
                     value={inputs.AveOccup|| ""}
@@ -127,6 +133,7 @@ function PredictionForm(){
                 />
 
                 <TextField
+                    className="form-element"
                     type="number"
                     inputProps={{
                         min:"32",
@@ -142,6 +149,7 @@ function PredictionForm(){
                     helperText={errors.Latitude}
                 />
                 <TextField
+                    className="form-element"
                     type="number"
                     inputProps={{
                         min:"-124",
@@ -158,6 +166,7 @@ function PredictionForm(){
                 />
 
                 <Button
+                    className="form-element"
                     variant="contained"
                     color="primary"
                     onClick={handleSubmit}>
@@ -165,7 +174,9 @@ function PredictionForm(){
                 </Button>
                 
             </form>
-            {prediction && <p> The average price of an house given these features is {prediction}$</p>}
+            {prediction && (
+            <p className="form-element">The average price of a house given these features is {prediction}$</p>
+            )}        
         </div>
     );
 }

@@ -46,6 +46,27 @@
   max-width: 800px; /* Adjust as needed */
 }
 
+.center {
+  text-align: center;
+  margin: 0 auto; /* Keeps the content centered with left alignment */
+  max-width: 800px; /* Adjust as needed */
+}
+.form-element {
+  display: block;
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.warning-paragraph {
+  background-color: #ffcc00; /* Yellow background */
+  color: black; /* Text color */
+  padding: 10px; /* Some padding */
+  border-radius: 5px; /* Rounded corners */
+  margin: 10px 0; /* Margin for spacing */
+  font-weight: bold; /* Bold text */
+}
+
+
+
 /* Alternatively, you can target the specific components */
 .App .MuiTypography-root {
   text-align: left;
