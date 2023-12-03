@@ -1,9 +1,21 @@
 .App {
   text-align: center;
+  background-color: #f5f5f5;
+  color: rgb(15, 135, 233) ; /* Adjust text color as needed */
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6px + 2vmin);
+}
+.Card {
+  margin: 20px;
+  padding: 20px;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -14,18 +26,31 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #165deb;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(8px + 2vmin);
+  color: rgb(202, 42, 42);
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.left-align {
+  text-align: left;
+  margin: 0 auto; /* Keeps the content centered with left alignment */
+  max-width: 800px; /* Adjust as needed */
+}
+
+/* Alternatively, you can target the specific components */
+.App .MuiTypography-root {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +61,5 @@
     transform: rotate(360deg);
   }
 }
+
+
