@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@mui/lab": "^5.0.0-alpha.170",
+    "@mui/material": "^5.15.17",
     "axios": "^1.6.2"
   }
 }
