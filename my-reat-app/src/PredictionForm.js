@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { TextField, Button, Select, MenuItem, FormControl, InputLabel, Slider, Typography, Grid } from '@mui/material';
 
+
 function PredictionForm() {
     const [inputs, setInputs] = useState({});
     const [errors, setErrors] = useState({});
@@ -74,13 +75,13 @@ function PredictionForm() {
 
     
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <Grid container spacing={1} alignItems="center">
-                    <Grid item xs={6} sm={6}>
+        <div sx={{ paddingX: 5 }}> {/* Increased padding on the left and right */}
+            <form onSubmit={handleSubmit} sx={{ marginX: 'auto', maxWidth: '300px' }}> {/* Center form with maximum width */}
+                <Grid container spacing={2} alignItems="center">                   
+               <Grid item xs={6} sm={6}>
                         <Typography>City</Typography>
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={6} sm={6}>
                         <Select
                             fullWidth
                             labelId="city-label"
@@ -88,6 +89,7 @@ function PredictionForm() {
                             name="City"
                             value={inputs.City || ""}
                             onChange={handleInputChange}
+                            sx={{ maxWidth: '500px' }}
                         >
                         <MenuItem value="Los Angeles">Los Angeles</MenuItem>
                         <MenuItem value="San Francisco">San Francisco</MenuItem>
@@ -102,6 +104,7 @@ function PredictionForm() {
                         <MenuItem value="Newport Beach">Newport Beach</MenuItem>
                         <MenuItem value="Mill Valley">Mill Valley</MenuItem>
                         <MenuItem value="Carmel-by-the-Sea">Carmel-by-the-Sea</MenuItem>
+                        
                     </Select>
                 </Grid>
                 <Grid item xs={12} sm={6}>
@@ -114,7 +117,9 @@ function PredictionForm() {
                         valueLabelDisplay="auto"
                          min={0}
                          max={50}
+                         sx={{ maxWidth: '500px' }}
                         />
+                                                      
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
@@ -129,6 +134,7 @@ function PredictionForm() {
                             onChange={handleInputChange}
                             error={!!errors.MedInc}  
                             helperText="Enter median income in 10 of thousands (e.g. put a 150000$, just type 15)"
+                            sx={{ maxWidth: '500px' }}
                         />
                 </Grid>
 
@@ -144,6 +150,7 @@ function PredictionForm() {
                             onChange={handleInputChange}
                             error={!!errors.HouseAge}
                             helperText="Median house age"
+                            sx={{ maxWidth: '500px' }}
                         />
                 </Grid>
 
@@ -159,6 +166,7 @@ function PredictionForm() {
                             onChange={handleInputChange}
                             error={!!errors.Population}
                             helperText="Average number of people in the block"
+                            sx={{ maxWidth: '500px' }}
                         />
                 </Grid>
 
@@ -174,6 +182,7 @@ function PredictionForm() {
                             onChange={handleInputChange}
                             error={!!errors.AveOccup}
                             helperText="Average household size"
+                            sx={{ maxWidth: '500px' }}
                         />
                 </Grid>
 
@@ -189,6 +198,7 @@ function PredictionForm() {
                             onChange={handleInputChange}
                             error={!!errors.RoomsPerBedroom}
                             helperText="Rooms per bedroom"
+                            sx={{ maxWidth: '500px' }}
                         />
                 </Grid>
             </Grid>

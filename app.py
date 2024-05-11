@@ -9,21 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the Lasso model (assuming Lasso in your case)
-model = load('lasso_model.joblib')
-
-# Haversine function to calculate distances
-def haversine(lat1, lon1, lat2, lon2):
-    """
-    Calculate the great circle distance in kilometers between two points 
-    on the earth (specified in decimal degrees).
-    """
-    lat1, lon1, lat2, lon2 = map(np.radians, [lat1, lon1, lat2, lon2])
-    dlat = lat2 - lat1
-    dlon = lon2 - lon1
-    a = np.sin(dlat/2)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon/2)**2
-    c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1-a))
-    R = 6371  # Radius of earth in kilometers
-    return c * R
+model = load('ridge_model.joblib')
 
 # Define the home route
 @app.route('/')
